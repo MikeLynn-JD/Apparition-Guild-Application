@@ -1,1 +1,181 @@
 This is the HTML and CSS code for the website:  
+
+
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- select the set of characters to utf-8 -->
+    <meta charset="UTF-8">
+    <!-- set title of form for browswer tabas -->
+    <title>Survey Form</title>
+    <!-- link form to the .css file -->
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <img src="https://i.imgur.com/MFPFQ4C.png" id="guild-logo" alt="edgy ghoul" class="image-center">
+    <!-- name and description of the form-document -->
+    <h1 id="title">Apparition - Illidan Guild Application</h1>
+    <p id="description">Thank you for your interest in Apparition. We look forward to reviewing your application.</p>
+    <!-- create the form element to begin gathering user input -->
+    <form method="post" id="survey-form">
+      <fieldset>
+        <h2>Personal Information</h2>
+        <!-- create user input for their name -->
+        <label for="name" id="name-label">What is your name: <input type="text" id="name" name="player-name" placeholder="i.e. Mike" required></label>
+        <!-- create user input for their email -->
+        <label for="email" id="email-label">What is your email: <input type="email" id="email" name="player-email" placeholder="i.e. abc123@gmail.com" required></label>
+        <!-- create user input for their age -->
+        <label for="number" id="number-label">What is your age (years): <input type="number" id="number" name="player-age" min=18 max=120 placeholder="i.e. 28" required></label>
+        <fieldset class="inline">
+                <!-- create user input for raid attendance -->
+        <legend for="raid-attendance" id="raid-attendance-Q" >Can you make our raid schedule? (required)</legend>
+        <label for="raid-attend-yes"> <input type="radio" id="raid-attend-yes" name="raid-attendence-check" value="yes" class="inline" class="inline" checked> Yes</label>
+        <label for="raid-attend-no"><input type="radio" id="raid-attend-no" name="raid-attendence-check" value="no" class="inline"> No</label>
+        </fieldset>
+      </fieldset>
+      <fieldset>
+        <h2>Character Information</h2>
+        <!-- create the prompt for the select item input -->
+        <label id="player-role">What role do you play?</label>
+        <!-- create user input for their player role -->
+        <select id="dropdown" name="character-role">
+          <option value="null">(select one)</option>
+          <option value="tank">Tank</option>
+          <option value="healer">Healer</option>
+          <option value="ranged-dps">Ranged DPS</option>
+          <option value="melee-dps">Melee DPS</option>
+        </select>
+        <fieldset class="inline">
+        <!-- create user input for the classes they play -->
+        <legend>What classes do you feel comfortable playing at a high level? (select all that apply)</legend>
+        <label for="death-knight"><input type="checkbox" id="death-knight" name="player-classes" value="death-knight" class="inline" checked> Death Knight</label>
+        <label for="demon-hunter"><input type="checkbox" id="demon-hunter" name="player-classes" value="demon-hunter" class="inline"> Demon Hunter</label>
+        <label for="druid"><input type="checkbox" id="druid" name="player-classes" value="druid" class="inline"> Druid</label>
+        <label for="evoker"><input type="checkbox" id="evoker" name="player-classes" value="evoker" class="inline"> Evoker</label>
+        <label for="hunter"><input type="checkbox" id="hunter" name="player-classes" value="hunter" class="inline"> Hunter</label>
+        <label for="mage"><input type="checkbox" id="mage" name="player-classes" value="mage" class="inline"> Mage</label>
+        <label for="monk"><input type="checkbox" id="monk" name="player-classes" value="monk" class="inline"> Monk</label>
+        <label for="paladin"><input type="checkbox" id="paladin" name="player-classes" value="paladin" class="inline"> Paladin</label>
+        <label for="priest"><input type="checkbox" id="priest" name="player-classes" value="priest" class="inline"> Priest</label>
+        <label for="rogue"><input type="checkbox" id="rogue" name="player-classes" value="rogue" class="inline"> Rogue</label>
+        <label for="shaman"><input type="checkbox" id="shaman" name="player-classes" value="shaman" class="inline"> Shaman</label>
+        <label for="warlock"><input type="checkbox" id="warlock" name="player-classes" value="warlock" class="inline"> Warlock</label>
+        <label for="warrior"><input type="checkbox" id="warrior" name="player-classes" value="warrior" class="inline"> Warrior</label>
+        </fieldset>
+      </fieldset>
+      <fieldset>
+        <h2>Miscelanious Information</h2>
+        <!-- create user input for a picture of their user interface -->
+        <label for="picture-ui">Provide a link to your in combat UI: <input type="file" id="picture-ui" name="picture-ui" required>
+        <!-- create useer input for why they want to join Apparition -->
+        <label for="why-apparition">Why do you want to join Apparition?
+          <textarea id="why-apparition" name="why-apparition" rows-"3" cols="30" placeholder="Because you guys do big damage!!..."></textarea>
+        </label>
+        <!-- create user input for their raiding/guild history -->
+        <label for="previous-guilds">Give a brief description of your past guild and raiding experince: 
+          <textarea id="previous-guilds" name="previous-guilds" rows="3" cols="30" placeholder="I raided [Guild name] during [raid tier] got X/Y bosses and I left because..."></textarea>
+          <!-- create user input for additional comments or info they wish
+            to provide -->
+        <label for="additional-comments">Anything else you would like us to know?
+          <textarea id="additional-comments" name="additional-comments" rows="3" cols="30" placeholder="Insert something interesting or funny here..."></textarea>
+      </fieldset>
+    <!-- create a submit button for the application -->
+    <input type="submit" name="Submit" id="submit">
+    </form>
+  </body>
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+
+.image-center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 65%;
+}
+
+body{
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  /*placeholder colors*/
+  background-color: #141414;
+  color: white;
+  font-family: Helvetica;
+  font-size: 16px;
+}
+
+h1,p{
+  margin: 1em auto;
+  text-align: center;
+}
+
+h2{
+  padding-top: 0;
+}
+
+form{
+  width: 60vw;
+  min-width: 300px;
+  max-width:600px;
+  margin: 0 auto;
+  padding: 2em;
+}
+
+.inline{
+  width: unset;
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+  display: inline;
+}
+
+label{
+  display: block;
+  padding: 0.5em
+}
+
+label[id="player-role"]{
+  display: inline;
+}
+
+fieldset{
+  border: none;
+  padding: 1.5rem 0;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+fieldset[class="inline"],legend{
+  padding-top: 1em;
+}
+
+input, textarea, select{
+  margin: 10px 0 0 0;
+  width: 100%;
+  min-height: 2em;
+  background-color: #636363;
+  border: 1px solid #636363;
+  color: #ffffff;
+}
+
+input[type="submit"]{
+  display: block;
+  width: 60%;
+  margin: 0.5em auto;
+  height: 1.0em;
+  background-color: #636363;
+  border-color: white;
+  color: white;
+}
+
+input[type="file"]{
+  padding: 1px 2px;
+}
+
+** end of undefined **
+
